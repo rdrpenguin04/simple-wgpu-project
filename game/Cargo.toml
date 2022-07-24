@@ -1,0 +1,8 @@
+[package]
+name = "gravibot"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+[dependencies]
+gravibot-engine = { path = "../engine" }
