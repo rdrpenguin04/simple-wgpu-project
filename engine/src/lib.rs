@@ -324,7 +324,7 @@ impl Engine {
                 self.fc += 1;
                 for x in 0..640 {
                     for y in 0..360 {
-                        gpu_state.image_rgba[(x, y)] = Rgba([0, 0, 0, 255]);
+                        gpu_state.image_rgba[(x, y)] = Rgba([((self.fc + x as u64) & 0xff) as u8, (((self.fc + x as u64) * 3) >> 3) as u8, 0, 255]);
                     }
                 }
                 match gpu_state.render() {
